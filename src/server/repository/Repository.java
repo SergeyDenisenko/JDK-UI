@@ -1,6 +1,6 @@
 package server.repository;
 
-interface Repository {
+public interface Repository {
     public void save(String text);
     public String read();
 }

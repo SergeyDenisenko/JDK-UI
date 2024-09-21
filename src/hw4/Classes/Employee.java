@@ -1,6 +1,6 @@
 package hw4.Classes;
 
-import hw4.Interfaces.*;
+import hw4.Interfaces.iEmployee;
 
 public class Employee<T, N> implements iEmployee<T, N> {
     private T serviceNumber;

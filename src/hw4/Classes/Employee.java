@@ -2,34 +2,34 @@ package hw4.Classes;
 
 import hw4.Interfaces.iEmployee;
 
-public class Employee<T, N> implements iEmployee<T, N> {
-    private T serviceNumber;
-    private N phoneNumber;
+public class Employee implements iEmployee {
+    private int serviceNumber;
+    private String phoneNumber;
     private String name;
     private int experience;
 
-    public Employee(T serviceNumber, String name) {
+    public Employee(int serviceNumber, String name) {
         this.serviceNumber = serviceNumber;
         this.name = name;
     }
 
-    public Employee(T serviceNumber, String name, N phoneNumber) {
+    public Employee(int serviceNumber, String name, String phoneNumber) {
         this(serviceNumber, name);
         this.phoneNumber = phoneNumber;
     }
 
-    public Employee(T serviceNumber, String name, N phoneNumber, int experience) {
+    public Employee(int serviceNumber, String name, String phoneNumber, int experience) {
         this(serviceNumber, name, phoneNumber);
         this.experience = experience;
     }
 
     @Override
-    public void setServiceNumber(T serviceNumber) {
+    public void setServiceNumber(int serviceNumber) {
         this.serviceNumber = serviceNumber;
     }
 
     @Override
-    public void setPhoneNumber(N phone) {
+    public void setPhoneNumber(String phone) {
         this.phoneNumber = phone;
     }
 
@@ -44,12 +44,12 @@ public class Employee<T, N> implements iEmployee<T, N> {
     }
 
     @Override
-    public T getServiceNumber() {
+    public int getServiceNumber() {
         return serviceNumber;
     }
 
     @Override
-    public N getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 

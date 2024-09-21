@@ -1,13 +1,13 @@
 package hw4.Interfaces;
 
-public interface iEmployee<T, N> {
-    void setServiceNumber(T serviceNumber);
-    void setPhoneNumber(N phone);
+public interface iEmployee {
+    void setServiceNumber(int serviceNumber);
+    void setPhoneNumber(String phone);
     void setName(String name);
     void setExperience(int experience);
 
-    T getServiceNumber();
-    N getPhoneNumber();
+    int getServiceNumber();
+    String getPhoneNumber();
     String getName();
     int getExperience();
 }

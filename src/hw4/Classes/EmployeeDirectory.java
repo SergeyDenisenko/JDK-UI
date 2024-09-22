@@ -31,7 +31,14 @@ public class EmployeeDirectory implements iEmployeeDirectory {
 
     @Override
     public List getPhoneByName(String name) {
-        return list.stream().filter(employee -> employee.getName().equalsIgnoreCase(name)).collect(Collectors.toList());
+        return list.stream().filter(employee -> employee.getName().equalsIgnoreCase(name)).map(employee -> employee.getPhoneNumber()).collect(Collectors.toList());
     }
     
+    public List getPhoneByName(String name, boolean inDetail) {
+        if (inDetail)
+        {
+            return list.stream().filter(employee -> employee.getName().equalsIgnoreCase(name)).collect(Collectors.toList());
+        }
+        return this.getPhoneByName(name);
+    }
 }

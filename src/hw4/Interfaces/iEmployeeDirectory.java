@@ -7,4 +7,5 @@ public interface iEmployeeDirectory {
     List<iEmployee> findByExperience(int experience);
     iEmployee findByServiceNumber(int serviceNumber);
     List<iEmployee> getPhoneByName(String name);
+    List<iEmployee> getPhoneByName(String name, boolean inDetail);
 }

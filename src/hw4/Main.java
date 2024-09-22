@@ -1,7 +1,6 @@
 package hw4;
 
-import hw4.Classes.Employee;
-import hw4.Classes.EmployeeDirectory;
+import hw4.Classes.*;
 import hw4.Interfaces.iEmployee;
 import hw4.Interfaces.iEmployeeDirectory;
 
@@ -23,5 +22,19 @@ public class Main {
         System.out.println("Сотрудник с табельным номером 240: " + employeeDirectory.findByServiceNumber(240));
         System.out.println("Номера телефонов сотрудников с именем Николай: " + employeeDirectory.getPhoneByName("Николай"));
         System.out.println("Номера телефонов сотрудников с именем Николай: " + employeeDirectory.getPhoneByName("Николай", true));
+    
+        EmployeeDirectory2 employeeDirectory2 = new EmployeeDirectory2(new Employee(345, "Николай", "89645413672", 10));
+
+        employeeDirectory2.add(emp1);
+        employeeDirectory2.add(emp2);
+        employeeDirectory2.add(emp3);
+        employeeDirectory2.add(emp4);
+
+        System.out.println();
+        System.out.println("Сотрудники со стажем 6 месяцев: " + employeeDirectory2.findByExperience(6));
+        System.out.println("Сотрудник с табельным номером 240: " + employeeDirectory2.findByServiceNumber(240));
+        System.out.println("Номера телефонов сотрудников с именем Николай: " + employeeDirectory2.getPhoneByName("Николай"));
+        System.out.println("Номера телефонов сотрудников с именем Николай: " + employeeDirectory2.getPhoneByName("Николай", true));
+
     }
 }
